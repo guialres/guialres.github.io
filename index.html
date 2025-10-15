@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Alcantara Tavares - Portfólio de TI & Redes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Inter', sans-serif; /* Fonte moderna */
+            background-color: #0d0d0d; /* Fundo mais escuro que o preto puro */
+            color: #f0f0f0; /* Cor do texto claro */
+        }
+        /* Efeito de hover limpo */
+        .nav-link:hover {
+            color: #4f46e5; /* Cor do link no hover (Indigo) */
+        }
+        /* Estilo da seção Hero com fundo atmosférico */
+        #hero {
+            /* Fundo de código binário ou cidade pixelizada - substitua pela sua imagem */
+            background-image: url('https://images.unsplash.com/photo-1542831371-29b0101efc99?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efeito Parallax suave */
+            position: relative;
+        }
+        /* Overlay escuro na Hero para contraste do texto */
+        #hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75); /* Overlay escuro */
+            z-index: 1;
+        }
+        #hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Estilos para as Tags de Habilidades */
+        .skill-tag {
+            background-color: #1f2937; /* Gray-800 */
+            color: #a5b4fc; /* Indigo-300 */
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #4f46e5; /* Indigo-600 */
+            transition: all 0.3s;
+        }
+        .skill-tag:hover {
+            background-color: #4f46e5; /* Indigo-600 */
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-md shadow-lg border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-3xl font-extrabold text-indigo-500 transition duration-300 hover:text-indigo-400">
+                GUI <i class="fas fa-arrow-up text-xl ml-1"></i>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#projetos" class="nav-link transition duration-300">Projetos</a>
+                <a href="#sobre" class="nav-link transition duration-300">Sobre</a>
+                <a href="#habilidades" class="nav-link transition duration-300">Habilidades</a>
+                <a href="#experiencia" class="nav-link transition duration-300">Experiência</a>
+                <a href="#desenvolvimento" class="nav-link transition duration-300">TI & Inovação</a>
+                <a href="#contato" class="nav-link transition duration-300">Contato</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <i class="fas fa-bars text-2xl text-white"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 border-t border-gray-800">
+            <a href="#projetos" class="block py-3 px-6 text-base hover:bg-gray-800 transition duration-300 nav-link">Projetos</a>
+            <a href="#sobre" class="block py-3 px-6 text-base hover:bg-gray-800 transition duration-300 nav-link">Sobre</a>
+            <a href="#habilidades" class="block py-3 px-6 text-base hover:bg-gray-800 transition duration-300 nav-link">Habilidades</a>
+            <a href="#experiencia" class="block py-3 px-6 text-base hover:bg-gray-800 transition duration-300 nav-link">Experiência</a>
+            <a href="#desenvolvimento" class="block py-3 px-6 text-base hover:bg-gray-800 transition duration-300 nav-link">TI & Inovação</a>
+            <a href="#contato" class="block py-3 px-6 text-base hover:bg-gray-800 transition duration-300 nav-link">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="h-screen flex items-center justify-center text-center p-6 relative">
+            <div class="max-w-4xl">
+                <p class="text-lg font-medium text-indigo-400 mb-4 tracking-wider">Bacharel em Sistemas de Informação</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                    Guilherme Alcantara Tavares
+                    <span class="block text-indigo-400">Técnico de Redes & Infraestrutura de TI</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-gray-300">
+                    Profissional pontual, dedicado e com forte capacidade de aprendizagem, buscando aplicar e aprimorar minhas habilidades técnicas na área de Tecnologia da Informação. Tenho foco no desenvolvimento contínuo, com o objetivo de contribuir com soluções inovadoras e eficientes, agregando valor à empresa.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://linkedin.com/in/guilherme-alcantara-tavares/" target="_blank" class="text-3xl text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    
+                    <a href="mailto:guilherme.alcantara.tavares@gmail.com?subject=Contato%20via%20Portfólio%20de%20TI" class="text-3xl text-gray-400 hover:text-indigo-500 transition duration-300" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="py-20 px-6 container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-indigo-500 inline-block mx-auto pb-2">Meus Projetos</h2>
+            
+            <div class="max-w-lg mx-auto"> <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden transition duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                    
+                    <img src="capa_tcc.jpg" alt="Capa do TCC sobre Inteligência Artificial" class="w-full h-48 object-cover">
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white">O USO DAS FERRAMENTAS DE IA PARA O APRENDIZADO DE PROGRAMAÇÃO</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Trabalho de Conclusão de Curso (UEMG), investigando a aplicação da Inteligência Artificial para superar dificuldades de sintaxe, resolução de erros e conceitos abstratos na aprendizagem.</p>
+                        
+                        <a href="https://pt.scribd.com/document/933170458/o-Uso-Das-Ferramentas-de-Inteligencia-Artificial-Para-o-Aprendizado-de-Programacao?secret_password=Mgh5Mi6kxgNxSxm6Xyh8" target="_blank" class="inline-block bg-indigo-600 text-white py-2 px-4 rounded-full text-sm font-medium hover:bg-indigo-700 transition duration-300">Ver TCC Completo (Scribd) <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-20 px-6 bg-gray-950">
+            <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="perfil.jpg" alt="Foto de Perfil Pessoal" class="w-full h-auto object-cover rounded-xl shadow-2xl border-4 border-indigo-500/50 grayscale transition duration-500 hover:grayscale-0">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-4xl font-bold mb-6 border-b-4 border-indigo-500 inline-block pb-2">Sobre Mim</h2>
+                    <p class="text-lg text-gray-300 mb-4">
+                        Sou Guilherme Alcantara Tavares, Bacharel em Sistemas de Informação pela UEMG (2019-2024) e com sólida experiência prática como Técnico de Redes. Minha base profissional foi construída em infraestrutura, manutenção de sistemas (Windows/Linux) e suporte técnico especializado, onde sempre busquei a eficiência operacional.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-4">
+                        Sou um profissional pontual, dedicado e com alta capacidade de aprendizagem, focado em contribuir com soluções eficientes e aprimorar minhas competências em suporte e infraestrutura de TI. Minhas habilidades técnicas e conhecimento em redes me permitem garantir a estabilidade e o bom funcionamento dos ambientes tecnológicos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="py-20 px-6 container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-indigo-500 inline-block mx-auto pb-2">Habilidades e Ferramentas</h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <span class="skill-tag">Redes e Configuração</span>
+                <span class="skill-tag">Sistemas Operacionais (Windows/Linux)</span>
+                <span class="skill-tag">Suporte Técnico Nível 1 e 2</span>
+                <span class="skill-tag">Manutenção e reparo de Hardware e Software</span>
+                <span class="skill-tag">Troubleshooting de Conexão</span>
+                <span class="skill-tag">Pacote Office (Word, Excel, PowerPoint)</span>
+                <span class="skill-tag">Comunicação e Trabalho em Equipe</span>
+                <span class="skill-tag">Automação de TI (Scripts)</span>
+                <span class="skill-tag">Instalação de Equipamentos</span>
+                <span class="skill-tag">Manutenção de Impressoras</span>
+                <span class="skill-tag">Formatação e Otimização de PCs</span>
+                <span class="skill-tag">Inglês Intermediário (leitura e comunicação básica)</span>
+                <span class="skill-tag">SQL Básico</span>
+                <span class="skill-tag">Conceitos de IA e Big Data</span>
+                <span class="skill-tag">Metodologias Ágeis</span>
+            </div>
+        </section>
+
+        <section id="experiencia" class="py-20 px-6 bg-gray-950">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-indigo-500 inline-block mx-auto pb-2">Experiência Profissional</h2>
+                
+                <div class="space-y-10">
+                    <div class="border-l-4 border-indigo-600 pl-6 relative">
+                        <div class="absolute -left-3 top-1 bg-indigo-600 w-6 h-6 rounded-full border-4 border-gray-950"></div>
+                        <h3 class="text-2xl font-semibold text-white">Técnico de Redes</h3>
+                        <p class="text-indigo-400 text-lg mb-2">Avançar, Provedor de Internet - Passos/MG (2023 – 2025)</p>
+                        <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                            <li>Manutenção e configuração de redes, garantindo estabilidade e segurança dos sistemas.</li>
+                            <li>Suporte técnico a clientes e instalação de equipamentos, promovendo uma experiência de qualidade.</li>
+                            <li>Atendimento técnico e suporte a mais de 100 clientes mensais, reduzindo falhas de conexão.</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-l-4 border-indigo-600 pl-6 relative">
+                        <div class="absolute -left-3 top-1 bg-indigo-600 w-6 h-6 rounded-full border-4 border-gray-950"></div>
+                        <h3 class="text-2xl font-semibold text-white">Assistente de TI</h3>
+                        <p class="text-indigo-400 text-lg mb-2">SAAE, Serviço Autônomo de Água e Esgoto - Passos/MG (2022 – 2023)</p>
+                        <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                            <li>Formatação de computadores e manutenção de impressoras, assegurando o bom funcionamento dos sistemas internos.</li>
+                            <li>Suporte técnico e otimização de processos de TI, contribuindo para a eficiência operacional.</li>
+                            <li>Contribuí para a melhoria da infraestrutura de TI.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-l-4 border-indigo-600 pl-6 relative">
+                        <div class="absolute -left-3 top-1 bg-indigo-600 w-6 h-6 rounded-full border-4 border-gray-950"></div>
+                        <h3 class="text-2xl font-semibold text-white">Técnico em Impressoras</h3>
+                        <p class="text-indigo-400 text-lg mb-2">Mundo das Impressoras - Passos/MG (2022)</p>
+                        <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                            <li>Manutenção de impressoras e recarga de toners.</li>
+                            <li>Garantia da qualidade e a continuidade do atendimento ao cliente.</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-l-4 border-indigo-600 pl-6 relative">
+                        <div class="absolute -left-3 top-1 bg-indigo-600 w-6 h-6 rounded-full border-4 border-gray-950"></div>
+                        <h3 class="text-2xl font-semibold text-white">Estagiário de TI</h3>
+                        <p class="text-indigo-400 text-lg mb-2">Tecnus Informática Ltda - Passos/MG (2016)</p>
+                        <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                            <li>Atuação com formatação de sistemas e manutenção de softwares.</li>
+                            <li>Foco em melhorar a performance dos sistemas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="desenvolvimento" class="py-20 px-6 bg-gray-950">
+            <div class="container mx-auto max-w-3xl text-center">
+                <h2 class="text-4xl font-bold mb-6 border-b-4 border-indigo-500 inline-block pb-2">TI & Inovação</h2>
+                
+                <p class="text-lg text-gray-300 mb-4">
+                    Este portfólio foi concebido e construído em colaboração com uma Inteligência Artificial, especificamente o modelo Gemini Flash 2.5 do Google, alinhando-se com minhas experiências profissionais em TI e infraestrutura.
+                </p>
+                <p class="text-lg text-gray-300 mb-4">
+                    O processo iniciou-se com o comando detalhado da estrutura, estilo (dark mode, clean UI) e requisitos de funcionalidade. A IA gerou a estrutura básica em HTML e Tailwind CSS, assegurando a responsividade e o refinamento visual com o mínimo de intervenção manual.
+                </p>
+                <p class="text-lg text-indigo-400 font-semibold">
+                    O resultado demonstra a união entre a agilidade da IA na prototipagem e o meu conhecimento de infraestrutura e sistemas, criando um site profissional e totalmente responsivo.
+                </p>
+            </div>
+        </section>
+
+        <section id="contato" class="py-20 px-6 bg-gray-950">
+            <div class="container mx-auto max-w-2xl text-center">
+                <h2 class="text-4xl font-bold mb-6 border-b-4 border-indigo-500 inline-block pb-2">Entre em Contato</h2>
+                <p class="text-xl text-gray-300 mb-8">Envie uma mensagem direta pelo WhatsApp para uma resposta mais rápida!</p>
+
+                <form id="whatsapp-form" class="space-y-6 text-left">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-300 mb-1">Seu Nome</label>
+                        <input type="text" id="nome" name="nome" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 text-white placeholder-gray-500">
+                    </div>
+                    <div>
+                        <label for="assunto" class="block text-sm font-medium text-gray-300 mb-1">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 text-white placeholder-gray-500">
+                    </div>
+                    <div>
+                    <div>
+                        <label for="mensagem" class="block text-sm font-medium text-gray-300 mb-1">Sua Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 text-white placeholder-gray-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full flex items-center justify-center p-4 bg-green-600 text-white text-xl font-bold rounded-lg hover:bg-green-700 transition duration-300 shadow-lg hover:shadow-green-500/50">
+                        <i class="fab fa-whatsapp text-2xl mr-3"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-gray-900 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 GAT. Portfólio. Desenvolvido com <span class="text-indigo-400">Tailwind CSS</span> e a colaboração de <span class="text-indigo-400">Gemini Flash 2.5</span>.</p>
+    </footer>
+
+    <script>
+        // Função para Menu Responsivo
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fechar menu mobile ao clicar em um link
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', event => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Funcionalidade WhatsApp Interativo
+        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o envio tradicional do formulário
+
+            const nome = document.getElementById('nome').value;
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            // Seu número de telefone (35) 99155-6590 no formato internacional (55 35 99155-6590)
+            const seuTelefone = '5535991556590'; 
+
+            // Construir a mensagem de pré-texto
+            const preTexto = `Olá, meu nome é ${nome}. Gostaria de falar sobre o seguinte assunto: "${assunto}".\n\nMinha mensagem: ${mensagem}`;
+
+            // URL Encoding para o texto da mensagem
+            const mensagemEncoded = encodeURIComponent(preTexto);
+
+            // Link final do WhatsApp API
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${seuTelefone}&text=${mensagemEncoded}`;
+
+            // Abrir o WhatsApp
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
